@@ -2,7 +2,7 @@
   <v-container>
     <v-layout class="pa-3" row wrap>
       <v-flex ma-1 xs12 md4>
-        <v-card class="mx-auto">
+        <v-card class="elevation-12 mx-auto">
           <v-card-title class="text-uppercase grey--text">
             Сообщения компании
           </v-card-title>
@@ -35,8 +35,8 @@
                   <v-img :src="message.avatar" />
                 </v-list-item-avatar>
                 <v-list-item-content>
-                  <v-list-item-title v-html="message.title" />
-                  <v-list-item-subtitle v-html="message.subtitle" />
+                  <!-- <v-list-item-title v-html="message.title" /> -->
+                  <!-- <v-list-item-subtitle v-html="message.subtitle" /> -->
                 </v-list-item-content>
               </v-list-item>
             </template>
@@ -44,7 +44,7 @@
         </v-card>
       </v-flex>
       <v-flex ma-1 xs12 md4>
-        <v-card class="mx-auto">
+        <v-card class="elevation-12 mx-auto">
           <v-card-title class="text-uppercase grey--text">
             Контакты
           </v-card-title>
@@ -63,9 +63,9 @@
                   <v-img :src="contact.avatar" />
                 </v-list-item-avatar>
                 <v-list-item-content>
-                  <v-list-item-title v-html="contact.name" />
-                  <v-list-item-subtitle v-html="contact.email" />
-                  <v-list-item-subtitle v-html="contact.phone" />
+                  <v-list-item-title>{{ contact.name }}</v-list-item-title>
+                  <v-list-item-subtitle>{{ contact.email }}</v-list-item-subtitle>
+                  <v-list-item-subtitle>{{ contact.phone }}</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
             </template>

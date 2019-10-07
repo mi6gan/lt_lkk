@@ -1,5 +1,5 @@
 {
-  "name": "lk_leasing_trade",
+  "name": "leasingtrade",
   "version": "1.0.0",
   "description": "Personal cabinet for LeasingTrade leasse",
   "author": "Ildar Farhutdinov",
@@ -15,6 +15,9 @@
     "@nuxtjs/apollo": "^4.0.0-rc4",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "asterisk-ami-client": "^1.1.5",
+    "asterisk-manager": "^0.1.16",
+    "net": "^1.0.2",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

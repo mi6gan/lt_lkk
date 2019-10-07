@@ -16,11 +16,6 @@
         <ul id="tasks" class="task-inner-list">
           <li v-for="(item,index) in tasks" :key="index" class="task-item">
             <h1>{{ item.name }}</h1>
-            <ul class="assigned">
-              <li v-for="(dev,index) in item.assigned" :key="index">
-                <img :src="dev.avatar" alt="">
-              </li>
-            </ul>
           </li>
         </ul>
       </li>
@@ -39,11 +34,6 @@
         <ul id="inprogress" class="task-inner-list">
           <li v-for="(item,index) in inprogress" :key="index" class="task-item">
             <h1>{{ item.name }}</h1>
-            <ul class="assigned">
-              <li v-for="(dev,index) in item.assigned" :key="index">
-                <img :src="dev.avatar" alt="">
-              </li>
-            </ul>
           </li>
         </ul>
       </li>
@@ -62,11 +52,6 @@
         <ul id="review" class="task-inner-list">
           <li v-for="(item,index) in review" :key="index" class="task-item">
             <h1>{{ item.name }}</h1>
-            <ul class="assigned">
-              <li v-for="(dev,index) in item.assigned" :key="index">
-                <img :src="dev.avatar" alt="">
-              </li>
-            </ul>
           </li>
         </ul>
       </li>
@@ -82,16 +67,6 @@
             @keyup.enter="addIssue('approved')"
           >
         </div>
-        <ul id="approved" class="task-inner-list">
-          <li v-for="(item,index) in approved" :key="index" class="task-item">
-            <h1>{{ item.name }}</h1>
-            <ul class="assigned">
-              <li v-for="(dev,index) in item.assigned" :key="index">
-                <img :src="dev.avatar" alt="">
-              </li>
-            </ul>
-          </li>
-        </ul>
       </li>
     </ul>
   </div>

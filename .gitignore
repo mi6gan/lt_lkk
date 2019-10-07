@@ -95,3 +95,4 @@ ssl/
 
 #sensitive info
 config.js
+plugins/

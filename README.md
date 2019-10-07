@@ -1,4 +1,4 @@
-# tempapp
+# LeasingTrade LK
 
 > My badass Nuxt.js project
 

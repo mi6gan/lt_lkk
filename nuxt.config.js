@@ -1,4 +1,3 @@
-import fs from 'fs'
 import colors from 'vuetify/es5/util/colors'
 import config from './config'
 
@@ -42,6 +41,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '@/plugins/asterisk'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -71,6 +71,11 @@ export default {
       default: {
         httpEndpoint: config.apollo.httpEndpoint
       }
+    }
+  },
+  pwa: {
+    meta: {
+      name: "LeasingTrade"
     }
   },
   /*

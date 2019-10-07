@@ -21,6 +21,15 @@
             {{ data.item }}
           </v-chip>
         </template>
+        <template v-slot:item="data">
+          <v-chip
+            class="white--text my-2 caption"
+            :color="statusColors[data.item]"
+            small
+          >
+            {{ data.item }}
+          </v-chip>
+        </template>
       </v-combobox>
       <v-spacer />
       <v-text-field
