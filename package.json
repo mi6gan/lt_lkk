@@ -1,10 +1,9 @@
 {
   "name": "lt_lkk",
   "version": "0.1.0",
+  "homepage": "https://mi6gan.github.io/lt_lkk/",
   "private": true,
   "dependencies": {
-    "graphql": "^14.5.8",
-    "graphql-tag": "^2.10.1",
     "ra-data-graphql-simple": "^2.9.7",
     "react": "^16.10.2",
     "react-admin": "^2.9.7",
@@ -12,6 +11,8 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -33,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "flow-bin": "^0.109.0"
+    "flow-bin": "^0.109.0",
+    "gh-pages": "^2.1.1"
   }
 }
