@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.js
 
@@ -9,7 +9,24 @@
 /coverage
 
 # production
-/build
+dist/
+packages/*/lib
+
+# idea
+.idea
+
+# File-based project format
+*.iws
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Editor-based Rest Client
+.idea/httpRequests
+
 
 # misc
 .DS_Store
@@ -21,3 +38,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+stats.html

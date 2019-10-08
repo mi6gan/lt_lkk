@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+import * as React from 'react';
+import { Admin, Resource } from 'react-admin';
+import buildGraphQLProvider from 'ra-data-graphql-simple';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import ContractList from './ContractList';
+
+type Props = {
+  token?: string,
+  uri?: string,
+};
+
+export default function App({
+  token = process.env.REACT_APP_TOKEN,
+  uri = process.env.REACT_APP_URI,
+}: Props): React.Node {
+  const [dataProvider, setDataProvider] = React.useState(null);
+  const onDataProvider = React.useCallback(
+    (provider) => setDataProvider(() => provider),
+    []
   );
-}
+  React.useEffect(
+    () => {
+      if (dataProvider === null) {
+        buildGraphQLProvider({
+          clientOptions: {
+            uri,
+            headers: {
+              authorization: token ? `Bearer ${token}` : '',
+            },
+          },
+        }).then(onDataProvider);
+      }
+    },
+    [dataProvider, onDataProvider, token, uri]
+  );
 
-export default App;
+  return dataProvider ? (
+    <Admin dataProvider={dataProvider}>
+      <Resource name="Contract" list={ContractList} />
+    </Admin>
+  ) : null;
+}

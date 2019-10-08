@@ -1,9 +1,13 @@
 {
-  "name": "lt_kk",
+  "name": "lt_lkk",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "ra-data-graphql-simple": "^2.9.7",
     "react": "^16.10.2",
+    "react-admin": "^2.9.7",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
@@ -27,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "flow-bin": "^0.109.0"
   }
 }
